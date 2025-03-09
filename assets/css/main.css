@@ -3233,6 +3233,23 @@ table.alt tbody tr td {
   max-width: 75%;
 }
 
+#header.alt div.benefits {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#header.alt div.benefits span {
+	width: 33%;
+}
+
+#header.alt div.benefits span ul li img {
+	height: 1.5em;
+}
+
+#header.alt div.benefits span p {
+	margin: 0;
+}
+
 @media screen and (max-width: 1280px) {
   #header {
     padding: 4em 4em 0.1em 4em;
@@ -3515,10 +3532,15 @@ body.is-preload #header.alt .logo {
 }
 
 #top-nav.alt ul li {
-  margin: 0 0.175em;
+  margin: 0;
+}
+
+#top-nav.alt ul li img {
+  height: 1.5em;
 }
 
 #top-nav.alt ul li a {
+  min-width: unset;
   font-size: 1.1em;
 }
 
@@ -3526,7 +3548,7 @@ body.is-preload #header.alt .logo {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4em;
+  min-height: 4em;
   width: 100%;
   z-index: 1000;
   padding: 1rem;
@@ -3543,15 +3565,16 @@ body.is-preload #header.alt .logo {
     ),
     #212121;
 }
+
 #top-nav.flex-nav div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #top-nav.flex-nav div a img {
   max-height: 2em;
-  margin-top: 1px;
+  padding: 0 10px;
 }
 
 #top-nav.flex-nav div ul li a {
@@ -3559,7 +3582,8 @@ body.is-preload #header.alt .logo {
   -webkit-transition: font-size 0.2s ease;
   -ms-transition: font-size 0.2s ease;
   transition: font-size 0.2s ease;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   height: 2.25em;
   line-height: 2.25em;
   padding: 0 0.5em;
