@@ -1,13 +1,6 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function ($) {
   var $window = $(window),
-    $body = $("body"),
-    $main = $("#main");
+    $body = $("body");
 
   // Breakpoints.
   breakpoints({
@@ -30,7 +23,6 @@
   var $nav = $("#nav");
 
   if ($nav.length > 0) {
-
     // Links.
     var $nav_a = $nav.find("a");
 
@@ -90,4 +82,42 @@
   $(".scrolly").scrolly({
     speed: 1000,
   });
+
+  var $downloadCta1 = $("#downloadCta1");
+  var $downloadCta2 = $("#downloadCta2");
+
+  // Hide all download buttons initially
+  $downloadCta1.find("a").hide();
+  $downloadCta2.find("a").hide();
+
+  // Detect browser
+  var userAgent = navigator.userAgent;
+
+  if (userAgent.includes("Chrome") && !userAgent.includes("Edg")) {
+    $downloadCta1.find(".cta-chrome").show();
+    $downloadCta2.find(".cta-chrome").show();
+  } else if (userAgent.includes("Firefox")) {
+    $downloadCta1.find(".cta-firefox").show();
+    $downloadCta2.find(".cta-firefox").show();
+  } else if (userAgent.includes("Edg")) {
+    // Detect Edge (Chromium-based)
+    $downloadCta1.find(".cta-edge").show();
+    $downloadCta2.find(".cta-edge").show();
+  }
+
+  var $macShortcut = $("#macShortcut");
+  var $windowsShortcut = $("#windowsShortcut");
+
+  // Hide both shortcuts initially
+  $macShortcut.hide();
+  $windowsShortcut.hide();
+
+  // Detect OS
+  var platform = navigator.platform.toLowerCase();
+
+  if (platform.includes("mac")) {
+    $macShortcut.show();
+  } else if (platform.includes("win")) {
+    $windowsShortcut.show();
+  }
 })(jQuery);

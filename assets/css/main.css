@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html,
 body,
 div,
@@ -246,7 +240,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 17pt;
   font-weight: 300;
   line-height: 1.65;
@@ -3203,23 +3197,11 @@ table.alt tbody tr td {
 }
 
 #header.alt {
-  padding: 7em 5em 4em 5em;
+  padding: 1em 5em 0 5em;
 }
 
 #header.alt h1 {
-  font-size: 3.25em;
-}
-
-#header.alt > * {
-  -moz-transition: opacity 3s ease;
-  -webkit-transition: opacity 3s ease;
-  -ms-transition: opacity 3s ease;
-  transition: opacity 3s ease;
-  -moz-transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  transition-delay: 0s;
-  opacity: 1;
+  font-size: 2.5em;
 }
 
 #header.alt .logo {
@@ -3233,21 +3215,116 @@ table.alt tbody tr td {
   max-width: 75%;
 }
 
+#header.alt .main-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6em;
+}
+
+#header.alt .main-row .gif-demo {
+  flex: 1 1 60%;
+}
+
+#header.alt .main-row .gif-demo img {
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
 #header.alt div.benefits {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex-direction: column;
 }
 
-#header.alt div.benefits span {
-	width: 33%;
+#header.alt div.benefits div {
+  flex: 1 1 30%;
 }
 
-#header.alt div.benefits span ul li img {
-	height: 1.5em;
+#header.alt div.benefits div.divider {
+  height: 2px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  flex: 0 0 2px;
 }
 
-#header.alt div.benefits span p {
-	margin: 0;
+@media (max-width: 980px) {
+  #header.alt .main-row {
+    flex-direction: column-reverse;
+  }
+  #header.alt div.benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header.alt div.benefits div {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #header.alt div.benefits div.divider {
+    width: 80%; /* Horizontal divider for columns */
+    height: 2px;
+    margin: 1rem 0;
+  }
+}
+
+#header.alt div.benefits div div.shortcuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+  width: fit-content;
+  color: #636363;
+  justify-self: center;
+}
+
+#header.alt div.benefits div div.shortcuts img {
+  height: 2.5em;
+}
+
+#header.alt div.benefits div div.shortcuts div {
+  width: unset;
+}
+
+#header.alt div.benefits div ul.icons {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header.alt div.benefits div ul li {
+  display: flex;
+  padding: 5px 10px;
+}
+
+#header.alt div.benefits div ul li img {
+  height: 2em;
+}
+
+#header.alt div.benefits div p {
+  margin: 0;
+}
+
+.download-cta {
+  padding: 2em;
+  margin-top: 15px;
+}
+
+.download-cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 3.5em;
+  margin: 0 auto;
+}
+
+.download-cta a img {
+  height: 2.5em;
+  padding: 0 15px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3313,17 +3390,6 @@ table.alt tbody tr td {
   }
 }
 
-body.is-preload #header.alt > * {
-  opacity: 0;
-}
-
-body.is-preload #header.alt .logo {
-  -moz-transform: scale(0.8) rotate(-30deg);
-  -webkit-transform: scale(0.8) rotate(-30deg);
-  -ms-transform: scale(0.8) rotate(-30deg);
-  transform: scale(0.8) rotate(-30deg);
-}
-
 /* Nav */
 
 #nav {
@@ -3336,10 +3402,10 @@ body.is-preload #header.alt .logo {
     border-top-right-radius 0.2s ease, padding 0.2s ease;
   transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
     border-top-right-radius 0.2s ease, padding 0.2s ease;
-  background-color: #f7f7f7;
-  z-index: 1000;
+  background-color: #e2e2e2;
+  z-index: 999;
   position: sticky;
-  top: 4em;
+  top: calc(4em - 4px);
   width: 100%;
   padding: 1em;
   border-top-left-radius: 0.25em;
@@ -3420,14 +3486,6 @@ body.is-preload #header.alt .logo {
 #nav ul li a.active {
   background-color: #ffffff;
   box-shadow: none;
-}
-
-#nav.alt ul li {
-  margin: 0 0.175em;
-}
-
-#nav.alt ul li a {
-  font-size: 1.1em;
 }
 
 #top-nav {
@@ -3658,9 +3716,10 @@ body.is-preload #header.alt .logo {
 #main input[type="button"],
 #main button,
 #main .button {
-  background-color: transparent;
+  background-color: #e2e2e2;
   box-shadow: inset 0 0 0 1px #dddddd;
   color: #636363 !important;
+  cursor: pointer;
 }
 
 #main input[type="submit"]:hover,
@@ -3692,7 +3751,7 @@ body.is-preload #header.alt .logo {
 #main input[type="button"].primary,
 #main button.primary,
 #main .button.primary {
-  background-color: #8cc9f0;
+  background-color: #274bee;
   color: #ffffff !important;
   box-shadow: none;
 }
@@ -3702,7 +3761,7 @@ body.is-preload #header.alt .logo {
 #main input[type="button"].primary:hover,
 #main button.primary:hover,
 #main .button.primary:hover {
-  background-color: #9acff2;
+  background-color: #5e77e7;
 }
 
 #main input[type="submit"].primary:active,
@@ -3961,9 +4020,9 @@ body.is-preload #header.alt .logo {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 5em 5em 3em 5em;
+  padding: 5em 5em 1em 5em;
   width: calc(100% + 2em);
-  margin: 0 0 3em -2em;
+  margin: 0 0 0em -2em;
 }
 
 #footer > * {
@@ -3973,7 +4032,7 @@ body.is-preload #header.alt .logo {
 
 #footer .copyright {
   width: 100%;
-  margin: 2.5em 0 2em 0;
+  margin: 0;
   font-size: 0.8em;
   text-align: center;
 }
@@ -4027,6 +4086,7 @@ body.is-preload #header.alt .logo {
   width: 64em;
   max-width: calc(100% - 4em);
   margin: 0 auto;
+  margin-top: 4em;
 }
 
 @media screen and (max-width: 480px) {
