@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>FactorVault</title>
+    <meta name="description" content="FactorVault home page" />
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://js.stripe.com" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -16,7 +16,7 @@
     <nav id="top-nav" class="alt flex-nav">
       <div>
         <a style="border-bottom: none" href="/"
-          ><img src="./images/name_only.png" alt=""
+          ><img src="./images/name_only.png" alt="FactorVault name"
         /></a>
       </div>
       <div>
@@ -34,14 +34,22 @@
       <header id="header" class="alt">
         <h1>One-time passcodes made simple</h1>
         <span class="logo"
-          ><img src="./images/white_transparent.png" alt=""
+          ><img src="./images/white_transparent.png" alt="FactorVault logo"
         /></span>
         <div class="main-row">
           <div id="benefits" class="benefits">
             <div>
               <div class="shortcuts">
-                <img id="macShortcut" src="./images/cmd_i.png" />
-                <img id="windowsShortcut" src="./images/ctrl_i.png" />
+                <img
+                  id="macShortcut"
+                  src="./images/cmd_i.png"
+                  alt="mac shortcut"
+                />
+                <img
+                  id="windowsShortcut"
+                  src="./images/ctrl_i.png"
+                  alt="windows shortcut"
+                />
               </div>
               <p>Autofill one-time passcodes with a simple keyboard shortcut</p>
             </div>
@@ -49,13 +57,13 @@
             <div>
               <ul class="icons">
                 <li>
-                  <img src="./images/gmail.png" />
+                  <img src="./images/gmail.png" alt="gmail logo" />
                 </li>
                 <li>
-                  <img src="./images/icloud.png" />
+                  <img src="./images/icloud.png" alt="icloud logo" />
                 </li>
                 <li>
-                  <img src="./images/outlook.png" />
+                  <img src="./images/outlook.png" alt="outlook logo" />
                 </li>
               </ul>
               <p>
@@ -66,34 +74,34 @@
             <div>
               <ul class="icons">
                 <li>
-                  <img src="./images/chrome.png" />
+                  <img src="./images/chrome.png" alt="chrome logo" />
                 </li>
                 <li>
-                  <img src="./images/firefox.png" />
+                  <img src="./images/firefox.png" alt="firefox logo" />
                 </li>
                 <li>
-                  <img src="./images/edge.png" />
+                  <img src="./images/edge.png" alt="edge logo" />
                 </li>
               </ul>
               <p>Works with modern browsers like Chrome, Firefox, and Edge</p>
             </div>
           </div>
           <div class="gif-demo">
-            <img src="./images/logo.svg" />
+            <img src="./images/logo.svg" alt="demo gif" />
           </div>
         </div>
         <div id="downloadCta1" class="download-cta">
           <a href="#" class="button cta-chrome">
             Download from the Chrome Web Store
-            <img src="./images/chrome.png" />
+            <img src="./images/chrome.png" alt="chrome logo" />
           </a>
           <a href="#" class="button cta-firefox">
             Download from the Firefox Add-ons Page
-            <img src="./images/firefox.png" />
+            <img src="./images/firefox.png" alt="firefox logo" />
           </a>
           <a href="#" class="button cta-edge">
             Download from the Edge Add-ons Page
-            <img src="./images/edge.png" />
+            <img src="./images/edge.png" alt="edge logo" />
           </a>
         </div>
       </header>
@@ -183,15 +191,15 @@
             <div id="downloadCta2" class="download-cta">
               <a href="#" class="button cta-chrome">
                 Download from the Chrome Web Store
-                <img src="./images/chrome.png" />
+                <img src="./images/chrome.png" alt="chrome logo" />
               </a>
               <a href="#" class="button cta-firefox">
                 Download from the Firefox Add-ons Page
-                <img src="./images/firefox.png" />
+                <img src="./images/firefox.png" alt="firefox logo" />
               </a>
               <a href="#" class="button cta-edge">
                 Download from the Edge Add-ons Page
-                <img src="./images/edge.png" />
+                <img src="./images/edge.png" alt="edge logo" />
               </a>
             </div>
           </footer>
@@ -211,6 +219,7 @@
             src="https://js.stripe.com/v3/pricing-table.js"
           ></script>
           <stripe-pricing-table
+            title="Stripe pricing table"
             pricing-table-id="prctbl_1QtZ6V4bG9Ttxx5UaddoNvmz"
             publishable-key="pk_test_51QrmaC4bG9Ttxx5UrsSoMxN0FjQuNE9lPOVti1sDsAngOI9TyLLBibxtSs9z5xmzIjZeogZQiBmzkqkU3B8iAHhV00GJXls6dp"
           >
@@ -251,14 +260,17 @@
             your valuable feedback by contacting us today.
           </p>
           <ul class="actions">
-            <li><a href="/contact-us.html" class="button">Learn More</a></li>
+            <li><a href="/contact-us.html" class="button">Apply now</a></li>
           </ul>
         </section>
         <section>
           <h2>Useful Information</h2>
           <dl class="alt">
+            <dd></dd>
             <dt><a href="/contact-us.html">Contact Us</a></dt>
+            <dd></dd>
             <dt><a href="/privacy.html">Privacy Policy</a></dt>
+            <dd></dd>
             <dt><a href="/terms.html">Terms and Conditions</a></dt>
           </dl>
           <!-- <ul class="icons">
