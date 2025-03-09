@@ -5,7 +5,6 @@
     <meta name="description" content="FactorVault contact us form" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -48,6 +47,7 @@
             <form id="contact" method="post" action="#">
               <div class="row gtr-uniform">
                 <div class="col-6 col-12-xsmall">
+                  <label for="name">Name:</label>
                   <input
                     required
                     type="text"
@@ -58,6 +58,7 @@
                   />
                 </div>
                 <div class="col-6 col-12-xsmall">
+                  <label for="email">Email:</label>
                   <input
                     required
                     type="email"
@@ -68,8 +69,9 @@
                   />
                 </div>
                 <div class="col-12">
+                  <label for="category">Category:</label>
                   <select name="category" id="category" required>
-                    <option value="">Category</option>
+                    <option value="">Select</option>
                     <option value="beta_test">Beta testing program</option>
                     <option value="problem_extension">
                       Problem with extension
@@ -88,6 +90,7 @@
                   </select>
                 </div>
                 <div class="col-12">
+                  <label for="message">Message:</label>
                   <textarea
                     name="message"
                     id="message"
