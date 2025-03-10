@@ -354,12 +354,15 @@ header.major h2:after {
 }
 #header.alt .main-row {
   display: flex;
-  justify-content: space-between;
-  gap: 6em;
+  justify-content: center;
+  gap: 2em;
   flex-wrap: wrap-reverse;
+  flex-direction: row;
 }
 #header.alt .main-row .gif-demo {
-  flex: 1 1 60%;
+  flex: 1 1 calc(55% - 2em);
+  max-width: 400px;
+  min-width: 300px;
 }
 #header.alt .main-row .gif-demo img {
   height: 100%;
@@ -371,6 +374,8 @@ header.major h2:after {
   justify-content: space-evenly;
   gap: 1rem;
   flex-direction: column;
+  flex: 0 1 calc(45% - 2em);
+  min-width: 300px;
 }
 #header.alt div.benefits div {
   flex: 1 1 30%;
@@ -612,7 +617,11 @@ ul li {
 ul.actions.special {
   flex-wrap: wrap;
   padding: 0;
-  gap: 0.5em;
+  gap: 1em;
+}
+
+ul.actions.special li {
+  padding: 0;
 }
 dl {
   margin: 0 0 2em 0;
@@ -653,9 +662,7 @@ ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
 }
-#footer ul.actions {
-  margin-left: 1em;
-}
+
 #header,
 article.special,
 section.special {
