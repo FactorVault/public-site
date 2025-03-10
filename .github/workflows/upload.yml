@@ -20,3 +20,11 @@ jobs:
           projectName: public-site # e.g. 'my-project'
           directory: . # e.g. 'dist'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/d889123137e1bd9c4e0e35b2cecaa204/purge_cache" \
+            -H "Content-Type: application/json" \
+            -H "X-Auth-Email: marshall.sorenson@factorvault.com" \
+            -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -d '{"purge-everything": true}'
