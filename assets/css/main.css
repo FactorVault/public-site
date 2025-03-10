@@ -342,7 +342,8 @@ header.major h2:after {
   background-color: rgba(255, 255, 255, 0.35);
 }
 #header.alt .logo {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 0 0 1.5em 0;
 }
 #header.alt .logo img {
@@ -355,6 +356,7 @@ header.major h2:after {
   display: flex;
   justify-content: space-between;
   gap: 6em;
+  flex-wrap: wrap-reverse;
 }
 #header.alt .main-row .gif-demo {
   flex: 1 1 60%;
@@ -607,6 +609,11 @@ ul {
 ul li {
   padding-left: 0.5em;
 }
+ul.actions.special {
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.5em;
+}
 dl {
   margin: 0 0 2em 0;
 }
@@ -645,6 +652,9 @@ ul.actions {
 ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
+}
+#footer ul.actions {
+  margin-left: 1em;
 }
 #header,
 article.special,
@@ -756,6 +766,11 @@ section.special {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 515px) {
+  #top-nav.flex-nav div.links {
+    display: none;
+  }
+}
 #top-nav.flex-nav div a img {
   max-height: 2em;
   padding: 0 10px;
@@ -807,10 +822,11 @@ section.special {
   padding: 5em 5em 1em 5em;
   width: calc(100% + 2em);
   margin: 0 0 0em -2em;
+  gap: 1em;
 }
 #footer > * {
-  width: calc(50% - 2em);
-  margin-left: 2em;
+  flex: 1 1 calc(50% - 1em);
+  min-width: 250px;
 }
 #footer .copyright {
   width: 100%;
