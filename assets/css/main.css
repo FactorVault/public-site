@@ -915,13 +915,14 @@ input[type="submit"] {
   -ms-justify-content: center;
   justify-content: center;
   width: calc(100% + 2em);
-  margin: 0 0 3em -2em;
+  margin: 0 0 3em -1em;
   padding: 0;
   list-style: none;
+  gap: 1em;
 }
 .features li {
-  width: calc(33.33333% - 2em);
-  margin-left: 2em;
+  flex: 0 1 30%;
+  min-width: 250px;
   margin-top: 3em;
   padding: 0;
 }
