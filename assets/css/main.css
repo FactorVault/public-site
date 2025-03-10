@@ -372,17 +372,14 @@ header.major h2:after {
 }
 #header.alt .main-row .gif-demo {
   flex: 1 1 calc(55% - 2em);
-  min-height: 400px;
-  min-width: 400px;
+  min-width: 320px;
   max-height: 550px;
   max-width: 550px;
   height: 100%;
 }
 #header.alt .main-row .gif-demo video {
-  object-fit: cover;
   border-radius: 0.75em;
   width: 100%;
-  min-height: 400px;
 }
 #header.alt div.benefits {
   display: flex;
