@@ -350,7 +350,7 @@ header.major h2:after {
   display: block;
   margin: 0 auto;
   max-width: 75%;
-  min-width: 350px;
+  min-width: 300px;
 }
 #header.alt .main-row {
   display: flex;
@@ -361,11 +361,15 @@ header.major h2:after {
 }
 #header.alt .main-row .gif-demo {
   flex: 1 1 calc(55% - 2em);
-  max-width: 400px;
-  min-width: 300px;
-}
-#header.alt .main-row .gif-demo img {
+  min-height: 400px;
+  min-width: 400px;
+  max-height: 550px;
+  max-width: 550px;
   height: 100%;
+}
+#header.alt .main-row .gif-demo video {
+  object-fit: cover;
+  border-radius: 0.75em;
   width: 100%;
   min-height: 400px;
 }
