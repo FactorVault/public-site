@@ -403,7 +403,6 @@ header.major h2:after {
   align-items: center;
   justify-content: center;
   border-radius: 0.25em;
-  width: fit-content;
   color: #636363;
   justify-self: center;
 }
