@@ -810,6 +810,20 @@ section.special {
   box-shadow: inset 0 0 0 1px transparent;
   color: white;
 }
+
+#contact div.row div.col-6 {
+  min-width: 200px;
+}
+
+#contact select {
+  min-width: 200px;
+  width: 40%;
+}
+
+#contact ul.actions {
+  flex-wrap: wrap;
+  gap: 1em
+}
 #main {
   background-color: #ffffff;
   border-radius: 0.25em;

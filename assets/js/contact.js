@@ -95,6 +95,7 @@
           email: $("#email").val().trim(),
           category: $("#category").val(),
           message: $("#message").val().trim(),
+          recaptcha: grecaptcha.getResponse(),
         };
 
         $.ajax({
