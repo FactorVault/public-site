@@ -99,7 +99,7 @@
         };
 
         $.ajax({
-          url: "http://localhost:3000/api/v1/contact",
+          url: "https://api.factorvault.com/api/v1/contact",
           type: "POST",
           data: JSON.stringify(formData),
           contentType: "application/json",
