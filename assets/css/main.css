@@ -551,7 +551,7 @@ header.major h2:after {
   box-shadow: none;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   #nav ul li a {
     min-width: unset;
   }
