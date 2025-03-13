@@ -58,16 +58,16 @@
           mode: "middle",
           initialize: function () {
             // Deactivate section.
-            if (browser.canUse("transition")) $section.addClass("inactive");
+              if (browser.canUse("transition")) $section.addClass("inactive");
           },
           enter: function () {
             // Activate section.
-            $section.removeClass("inactive");
+              $section.removeClass("inactive");
 
             // No locked links? Deactivate all links and activate this section's one.
             if ($nav_a.filter(".active-locked").length == 0) {
-              $nav_a.removeClass("active");
-              $this.addClass("active");
+                $nav_a.removeClass("active");
+                $this.addClass("active");
             }
 
             // Otherwise, if this section's link is the one that's locked, unlock it.
@@ -112,12 +112,10 @@
   $macShortcut.hide();
   $windowsShortcut.hide();
 
-  // Detect OS
-  var platform = navigator.platform.toLowerCase();
-
-  if (platform.includes("mac")) {
+  // Detect OS.
+  if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
     $macShortcut.show();
-  } else if (platform.includes("win")) {
+  } else {
     $windowsShortcut.show();
   }
 })(jQuery);
