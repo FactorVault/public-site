@@ -5,7 +5,7 @@
       if (!$("#name").val().trim()) {
         $("#nameError.error").remove();
         $("#name").after(
-          "<p id='nameError' class='error' style='color: red;'>Enter a valid name.</p>"
+          "<p id='nameError' class='error validation-error'>Enter a valid name.</p>"
         );
         return false;
       } else {
@@ -20,7 +20,7 @@
       if ((email && !emailPattern.test(email)) || !email) {
         $("#emailError.error").remove();
         $("#email").after(
-          "<p id='emailError' class='error' style='color: red;'>Enter a valid email address.</p>"
+          "<p id='emailError' class='error validation-error'>Enter a valid email address.</p>"
         );
         return false;
       } else {
@@ -33,7 +33,7 @@
       if (!$("#category").val()) {
         $("#catError.error").remove();
         $("#category").after(
-          "<p id='catError' class='error' style='color: red;'>Please select a category.</p>"
+          "<p id='catError' class='error validation-error'>Please select a category.</p>"
         );
         return false;
       } else {
@@ -46,7 +46,7 @@
       if (!$("#message").val()) {
         $("#messageError.error").remove();
         $("#message").after(
-          "<p id='messageError' class='error' style='color: red;'>Please enter a message.</p>"
+          "<p id='messageError' class='error validation-error'>Please enter a message.</p>"
         );
         return false;
       } else {
@@ -87,7 +87,7 @@
 
       if (nameValid && emailValid && catValid && messageValid) {
         $("#contact").append(
-          "<p id='progress' style='color: green;'>Submitting...</p>"
+          "<p id='progress' class='validation-progress'>Submitting...</p>"
         );
 
         var formData = {
@@ -107,7 +107,7 @@
           success: () => {
             $("#progress").remove();
             $("#contact").append(
-              "<p id='success' style='color: green;'>Your message has been sent successfully!</p>"
+              "<p id='success' class='validation-success'>Your message has been sent successfully!</p>"
             );
             $("#contact")[0].reset();
             setTimeout(() => {
@@ -117,7 +117,7 @@
           error: () => {
             $("#progress").remove();
             $("#contact").append(
-              "<p id='error' style='color: red;'>There was an error submitting the form. Please try again later.</p>"
+              "<p id='error' class='validation-error'>There was an error submitting the form. Please try again later.</p>"
             );
             setTimeout(() => {
               $("#error").remove();

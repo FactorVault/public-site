@@ -1049,6 +1049,15 @@ h2.guarantee {
   color: #055900;
 }
 
+.validation-error {
+  color: red;
+}
+
+.validation-success, .validation-progress {
+  color: green;
+}
+
+
 .button,
 button,
 input[type="button"],
