@@ -5,11 +5,13 @@
 }
 
 body {
-  background: linear-gradient(-255deg,
+  background: linear-gradient(
+      -255deg,
       rgba(6, 21, 34, 0.5019607843) -3.35%,
       rgba(147, 158, 255, 0.2196078431) -1.21%,
       rgba(29, 151, 255, 0.5019607843) 47.41%,
-      #0099b0 97.48%),
+      #0099b0 97.48%
+    ),
     #212121;
   line-height: 1;
   -webkit-text-size-adjust: none;
@@ -23,11 +25,13 @@ html {
 body {
   font-family: "Roboto", Helvetica, sans-serif !important;
   background-color: #212121;
-  background: linear-gradient(-255deg,
+  background: linear-gradient(
+      -255deg,
       rgba(6, 21, 34, 0.5019607843) -3.35%,
       rgba(147, 158, 255, 0.2196078431) -1.21%,
       rgba(29, 151, 255, 0.5019607843) 47.41%,
-      #0099b0 97.48%),
+      #0099b0 97.48%
+    ),
     #212121;
 }
 
@@ -216,11 +220,13 @@ ol li {
 }
 
 #top-nav.flex-nav {
-  background: linear-gradient(-255deg,
+  background: linear-gradient(
+      -255deg,
       rgba(6, 21, 34, 0.5019607843) -3.35%,
       rgba(147, 158, 255, 0.2196078431) -1.21%,
       rgba(29, 151, 255, 0.5019607843) 47.41%,
-      #0099b0 97.48%),
+      #0099b0 97.48%
+    ),
     #212121;
 }
 
@@ -368,6 +374,10 @@ section.special header.major h2:after {
   margin-right: auto;
 }
 
+section.main.special {
+  text-align: left;
+}
+
 header.major p {
   font-size: 1.25em;
   letter-spacing: -0.025em;
@@ -392,6 +402,10 @@ header.major h2:after {
 
 #header .coming-soon h2 {
   margin: 0;
+}
+
+#header .coming-soon h2 a {
+  color: #2bb1ff;
 }
 
 #header.alt .logo {
@@ -505,7 +519,7 @@ header.major h2:after {
   text-align: center;
 }
 
-#nav+#main {
+#nav + #main {
   padding-top: 4.25em;
 }
 
@@ -889,11 +903,13 @@ section.special {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(-255deg,
+  background: linear-gradient(
+      -255deg,
       rgba(6, 21, 34, 0.5019607843) -3.35%,
       rgba(147, 158, 255, 0.22) -1.21%,
       rgba(29, 151, 255, 0.5019607843) 47.41%,
-      #0099b0 97.48%),
+      #0099b0 97.48%
+    ),
     #212121;
 }
 
@@ -941,7 +957,7 @@ section.special {
 
 #contact ul.actions {
   flex-wrap: wrap;
-  gap: 1em
+  gap: 1em;
 }
 
 #main {
@@ -962,12 +978,12 @@ section.special {
   color: #636363;
 }
 
-#main>.main {
+#main > .main {
   padding: 6em 5em 3em 5em;
   border-top: solid 1px #dddddd;
 }
 
-#main>.main:first-child {
+#main > .main:first-child {
   border-top: 0;
 }
 
@@ -987,7 +1003,7 @@ section.special {
   color: #ffffff;
 }
 
-#footer>* {
+#footer > * {
   flex: 1 1 calc(50% - 1em);
   min-width: 250px;
 }
@@ -1011,6 +1027,28 @@ section.special {
   margin-top: 4em;
 }
 
+#questions a {
+  color: blue;
+}
+
+div#tutorialVideo {
+  padding: 75% 0 0 0;
+  position: relative;
+}
+
+#tutorialVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+}
+
+h2.guarantee {
+  color: #055900;
+}
+
 .button,
 button,
 input[type="button"],
@@ -1027,19 +1065,19 @@ input[type="submit"] {
   align-items: stretch;
 }
 
-.row>.col-6 {
+.row > .col-6 {
   width: 50%;
 }
 
-.row>.col-12 {
+.row > .col-12 {
   width: 100%;
 }
 
-.row>* {
+.row > * {
   box-sizing: border-box;
 }
 
-.row.gtr-uniform>*> :last-child {
+.row.gtr-uniform > * > :last-child {
   margin-bottom: 0;
 }
 
@@ -1048,7 +1086,7 @@ input[type="submit"] {
   margin-left: -1.5em;
 }
 
-.row>* {
+.row > * {
   padding: 0 0 0 1.5em;
 }
 
@@ -1056,7 +1094,7 @@ input[type="submit"] {
   margin-top: -1.5em;
 }
 
-.row.gtr-uniform>* {
+.row.gtr-uniform > * {
   padding-top: 1.5em;
 }
 
@@ -1130,7 +1168,7 @@ input[type="submit"] {
   margin-top: 0;
 }
 
-.features li> :last-child {
+.features li > :last-child {
   margin-bottom: 0;
 }
 
@@ -1150,7 +1188,7 @@ input[type="submit"] {
   flex: 1;
 }
 
-.spotlight .content> :last-child {
+.spotlight .content > :last-child {
   margin-bottom: 0;
 }
 
@@ -1201,7 +1239,6 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1680px) {
-
   body,
   input,
   select,
@@ -1211,7 +1248,6 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1280px) {
-
   body,
   input,
   select,
@@ -1224,7 +1260,7 @@ input[type="submit"] {
   }
 
   #footer,
-  #main>.main {
+  #main > .main {
     padding: 4em 4em 2em 4em;
   }
 }
