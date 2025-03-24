@@ -110,6 +110,9 @@
           data: JSON.stringify(formData),
           contentType: "application/json",
           dataType: "json",
+          headers: {
+            "x-csrf-token": $("input[name='_csrf']").val()
+          },
           success: () => {
             $("#progress").remove();
             $("#contact").append(
