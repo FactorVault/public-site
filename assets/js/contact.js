@@ -1,5 +1,10 @@
 (function ($) {
   $(document).ready(function () {
+    // Setup CSRF
+    $.get("https://api.factorvault.com/api/v1/contact/csrf", function (data) {
+      $("input[name='_csrf']").val(data.csrfToken);
+    });
+
     // Validator functions
     function checkName() {
       if (!$("#name").val().trim()) {
@@ -96,6 +101,7 @@
           category: $("#category").val(),
           message: $("#message").val().trim(),
           recaptcha: grecaptcha.getResponse(),
+          _csrf: $("input[name='_csrf']").val(),
         };
 
         $.ajax({
