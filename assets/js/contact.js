@@ -1,20 +1,5 @@
 (function ($) {
   $(document).ready(function () {
-    // Setup CSRF
-    $.ajax({
-      url: "https://api.factorvault.com/api/v1/contact/csrf",
-      method: "GET",
-      xhrFields: {
-        withCredentials: true // This enables sending cookies cross-origin
-      },
-      success: function (data) {
-        $("input[name='_csrf']").val(data.csrfToken);
-      },
-      error: function(xhr, status, error) {
-        console.error("Failed to fetch CSRF token:", error);
-      }
-    });
-
     // Validator functions
     function checkName() {
       if (!$("#name").val().trim()) {
@@ -111,7 +96,6 @@
           category: $("#category").val(),
           message: $("#message").val().trim(),
           recaptcha: grecaptcha.getResponse(),
-          _csrf: $("input[name='_csrf']").val(),
         };
 
         $.ajax({
@@ -120,9 +104,6 @@
           data: JSON.stringify(formData),
           contentType: "application/json",
           dataType: "json",
-          headers: {
-            "x-csrf-token": $("input[name='_csrf']").val()
-          },
           success: () => {
             $("#progress").remove();
             $("#contact").append(
