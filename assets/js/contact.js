@@ -1,8 +1,18 @@
 (function ($) {
   $(document).ready(function () {
     // Setup CSRF
-    $.get("https://api.factorvault.com/api/v1/contact/csrf", function (data) {
-      $("input[name='_csrf']").val(data.csrfToken);
+    $.ajax({
+      url: "https://api.factorvault.com/api/v1/contact/csrf",
+      method: "GET",
+      xhrFields: {
+        withCredentials: true // This enables sending cookies cross-origin
+      },
+      success: function (data) {
+        $("input[name='_csrf']").val(data.csrfToken);
+      },
+      error: function(xhr, status, error) {
+        console.error("Failed to fetch CSRF token:", error);
+      }
     });
 
     // Validator functions
