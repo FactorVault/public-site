@@ -48,7 +48,7 @@
 
     // Multiple elements?
     if (this.length > 1) {
-      for (const i = 0; i < this.length; i++) $(this[i]).panel(userConfig);
+      for (let i = 0; i < this.length; i++) $(this[i]).panel(userConfig);
 
       return $this;
     }
@@ -173,7 +173,7 @@
 
       // Hide on swipe?
       if (config.hideOnSwipe) {
-        const result = false,
+        let result = false,
           boundary = 20,
           delta = 50;
 
@@ -272,7 +272,7 @@
 
     // Multiple elements?
     if (this.length > 1) {
-      for (const i = 0; i < this.length; i++) $(this[i]).placeholder();
+      for (let i = 0; i < this.length; i++) $(this[i]).placeholder();
 
       return $this;
     }
