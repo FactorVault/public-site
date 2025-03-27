@@ -24,7 +24,6 @@ html {
 
 body {
   font-family: "Roboto", Helvetica, sans-serif !important;
-  background-color: #212121;
   background: linear-gradient(
       -255deg,
       rgba(6, 21, 34, 0.5019607843) -3.35%,
@@ -318,7 +317,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -1053,10 +1051,10 @@ h2.guarantee {
   color: red;
 }
 
-.validation-success, .validation-progress {
+.validation-success,
+.validation-progress {
   color: green;
 }
-
 
 .button,
 button,

@@ -94,8 +94,9 @@
     );
 
     // Expand "target" if it's not a jQuery object already.
-    if (typeof config.target != "jQuery") config.target = $(config.target);
-
+    if (!(config.target instanceof jQuery)) {
+      config.target = $(config.target);
+    }
     // Panel.
 
     // Methods.
@@ -444,13 +445,15 @@
     const key = "__prioritize";
 
     // Expand $elements if it's not already a jQuery object.
-    if (typeof $elements != "jQuery") $elements = $($elements);
+    if (!($elements instanceof jQuery)) {
+      $elements = $($elements);
+    }
 
     // Step through elements.
     $elements.each(function () {
       const $e = $(this);
       let $p;
-      $parent = $e.parent();
+      const $parent = $e.parent();
 
       // No parent? Bail.
       if ($parent.length == 0) return;
