@@ -1,5 +1,5 @@
 (function ($) {
-  var $window = $(window),
+  const $window = $(window),
     $body = $("body");
 
   // Breakpoints.
@@ -20,11 +20,11 @@
   });
 
   // Nav.
-  var $nav = $("#nav");
+  const $nav = $("#nav");
 
   if ($nav.length > 0) {
     // Links.
-    var $nav_a = $nav.find("a");
+    const $nav_a = $nav.find("a");
 
     $nav_a
       .scrolly({
@@ -34,7 +34,7 @@
         },
       })
       .on("click", function () {
-        var $this = $(this);
+        const $this = $(this);
 
         // External link? Bail.
         if ($this.attr("href").charAt(0) != "#") return;
@@ -46,7 +46,7 @@
         $this.addClass("active").addClass("active-locked");
       })
       .each(function () {
-        var $this = $(this),
+        const $this = $(this),
           id = $this.attr("href"),
           $section = $(id);
 
@@ -83,15 +83,15 @@
     speed: 1000,
   });
 
-  var $downloadCta1 = $("#downloadCta1");
-  var $downloadCta2 = $("#downloadCta2");
+  const $downloadCta1 = $("#downloadCta1");
+  const $downloadCta2 = $("#downloadCta2");
 
   // Hide all download buttons initially
   $downloadCta1.find("a").hide();
   $downloadCta2.find("a").hide();
 
   // Detect browser
-  var userAgent = navigator.userAgent;
+  const userAgent = navigator.userAgent;
 
   if (userAgent.includes("Chrome") && !userAgent.includes("Edg")) {
     $downloadCta1.find(".cta-chrome").show();
@@ -105,8 +105,8 @@
     $downloadCta2.find(".cta-edge").show();
   }
 
-  var $macShortcut = $("#macShortcut");
-  var $windowsShortcut = $("#windowsShortcut");
+  const $macShortcut = $("#macShortcut");
+  const $windowsShortcut = $("#windowsShortcut");
 
   // Hide both shortcuts initially
   $macShortcut.hide();

@@ -80,17 +80,17 @@
     $("#contact").on("submit", function (e) {
       e.preventDefault();
 
-      var nameValid = checkName();
-      var emailValid = checkEmail();
-      var catValid = checkCategory();
-      var messageValid = checkMessage();
+      const nameValid = checkName();
+      const emailValid = checkEmail();
+      const catValid = checkCategory();
+      const messageValid = checkMessage();
 
       if (nameValid && emailValid && catValid && messageValid) {
         $("#contact").append(
           "<p id='progress' class='validation-progress'>Submitting...</p>"
         );
 
-        var formData = {
+        const formData = {
           name: $("#name").val().trim(),
           email: $("#email").val().trim(),
           category: $("#category").val(),
